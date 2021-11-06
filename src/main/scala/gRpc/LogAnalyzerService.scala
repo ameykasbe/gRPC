@@ -14,10 +14,11 @@ class LogAnalyzerService(searchResponse: AnalyzeLogResponse) extends LogAnalyzer
     val inputDate = request.inputDate
     val inputTime = request.inputTime
     val deltaTime = request.deltaTime
+    val deltaTime = request.pattern
     logger.info("Parameters parsed from request")
 
     // GET request
-    val response = scala.io.Source.fromURL(s"https://3ekrhlf0g0.execute-api.us-east-2.amazonaws.com/default/lambda_grpc?input_date=$inputDate&input_time=$inputTime&delta_time=$deltaTime").mkString
+    val response = scala.io.Source.fromURL(s"https://3ekrhlf0g0.execute-api.us-east-2.amazonaws.com/default/lambda_grpc?input_date=$inputDate&input_time=$inputTime&delta_time=$deltaTime&pattern=$pattern").mkString
 
     logger.info("Response generated")
     Future.successful(AnalyzeLogResponse(response))
