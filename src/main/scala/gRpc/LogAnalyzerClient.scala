@@ -1,0 +1,5 @@
+package gRpc
+
+class LogAnalyzerClient {
+
+}
