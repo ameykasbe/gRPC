@@ -1,0 +1,31 @@
+// Define the syntax
+syntax = "proto3";
+
+package gRPC.protobuf;
+
+/*
+  gRPC service definition - Requests to analyze the log file.
+  gRPC style - Single request - response style
+ */
+
+
+service LogAnalyzer {
+  // Analyzes log
+  rpc Analyze(AnalyzeLogRequest) returns (AnalyzeLogResponse) {}
+}
+
+/*
+  gRPC request
+ */
+message AnalyzeLogRequest {
+  string inputDate = 1; // First argument - String representing inputDate
+  string inputTime = 2; // Second argument - String representing inputTime
+  string deltaTime = 3; // Third argument - String representing deltaTime
+}
+
+/*
+  gRPC Response
+ */
+message AnalyzeLogResponse {
+  string result = 1; // Result string
+}
