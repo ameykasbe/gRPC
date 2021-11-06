@@ -9,7 +9,6 @@ class LogAnalyzerServer(server: Server) {
   // Create logger
   val logger = LoggerFactory.getLogger(getClass)
 
-
   /*
     Stop serving requests and shutdown resources.
   */
@@ -53,11 +52,9 @@ object LogAnalyzerServer extends App {
     // Define port
     val port = 8980
 
-
-
-
     // Create service instance
     val grpcServiceInstance = new LogAnalyzerService(new AnalyzeLogResponse)
+  logger.info("gRPC Service instance created")
 
     // Create a server instance using serverBuilder as a base
     val server = new LogAnalyzerServer(ServerBuilder.forPort(port).addService(
