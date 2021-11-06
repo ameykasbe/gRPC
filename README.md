@@ -224,12 +224,12 @@ Invoke the lambda functions by using the AWS API Gateway with the requests GET a
 3. Execute - <br />
    `sbt clean compile test`
 
-### YouTube link
-- YouTube link of the short video that documents all steps of the deployment and execution -
-  [YouTube Link](https://youtu.be/0uDYI6TUnag)
+### Video link
+- Video link of the short video that documents all steps of the deployment and execution -
+  [Video Link](https://youtu.be/0uDYI6TUnag)
 
 ### References
 1. Dr. Grechanik, Mark, (2020) Cloud Computing: Theory and Practice.
-2. [Scala Days Conferences](https://www.youtube.com/watch?v=778znDnjROg)
+2. [Scala Days Conferences](https://drive.google.com/file/d/1HQtFmeDPZoDfgBvT9UWsL8KxgV-4dun7/view?usp=sharing)
 
   
